@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<scan_to_login translate="label" module="scantologin">
+			<label>Zapper for eCommerce</label>
+			<sort_order>200</sort_order>
+	    </scan_to_login>
+	</tabs>
+	<sections>
+		<zapper  translate="label" module="scantologin">                    
+			<label>Zapper Settings</label>
+			<tab>scan_to_login</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>0</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>            
+			<groups>
+				<config translate="label"> 
+					<label>General</label>
+					<frontend_type>text</frontend_type>					  
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>				       	  
+						<merchant_id translate="label">
+							<label>Merchant ID</label>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number</validate>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Please insert your zapper Merchant ID. Ex: 740</comment>
+						</merchant_id>              
+						<qrsize translate="label">
+							<label>QRCode Size</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Determines the density of the QRCode. Ex: 4</comment>
+						</qrsize>
+						<timeout translate="label">
+							<label>Timeout</label>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number</validate>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>How often (in milliseconds) the server is polled to check if a device has scanned and submitted answers for a code. Ex: 5000 </comment>
+						</timeout>               
+					</fields>                
+				</config>  
+				<scan_to_login translate="label"> 
+					<label>Scan To Login</label>
+					<frontend_type>text</frontend_type>           
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enable Scan to Login</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Select No to disable the Scan to Login functionality on your magento site</comment>
+						</active>
+						<site_id translate="label">
+							<label>Site ID</label>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number</validate>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Please insert your zapper Site ID.  Ex: 406</comment>
+						</site_id>    
+						<selector translate="label">
+							<label>Scan to Login Selector</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>A jquery/css selector that specifies where the Qr Code image will be inserted. Ex: login-form</comment>
+						</selector>
+						<additionalparameters translate="label">
+							<label>Additional Parameters</label>
+							<frontend_type>Textarea</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>A javascript array of string values that will be included in the Qr Code data. Ex: []</comment>
+						</additionalparameters>
+						<sandbox translate="label">
+							<label>Enable Sandbox</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Select No to disable the Scan to Login Sandbox mode and pur into Production</comment>
+						</sandbox>
+					</fields>                
+				</scan_to_login>                             
+			</groups>
+		</zapper>
+	</sections>
+</config>

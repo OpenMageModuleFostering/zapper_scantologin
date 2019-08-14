@@ -1,0 +1,22 @@
+<form id="login-form" action="<?php echo $this->getPostAction() ?>" method="post">
+    <div class="zapper-account-login">
+        <?php Mage::helper('scantologin')->render(0); ?>   
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    var loginForm = new VarienForm('login-form', true);
+    function bindLoginPost(evt){
+        if (evt.keyCode == Event.KEY_RETURN) {
+            loginForm.submit();
+        }
+    }
+    function onepageLogin(button)
+    {
+        if(loginForm.validator && loginForm.validator.validate()){
+            button.disabled = true;
+            loginForm.submit();
+        }
+    }
+//]]>
+</script>

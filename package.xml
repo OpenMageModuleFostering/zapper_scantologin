@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>zapper_scantologin</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/gpl-license.php">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Zapper for eCommerce Login and Register integration.&#xD;
+Frictionless Login and Register via mobile device.</summary>
+    <description>Zapper for eCommerce&#x2122; Login and Register is a friction-less user login and registration mechanism for the Magento site. This allows the visitors of the site, who use the Zapper&#x2122; mobile application, to securely and instantly register and login to the Magento site, through a mobile device. User credentials are securely stored on the mobile device. </description>
+    <notes>Initial release.&#xD;
+</notes>
+    <authors><author><name>Branden</name><user>Magento_OTA</user><email>branden.paine@ota.co.za</email></author></authors>
+    <date>2014-05-09</date>
+    <time>08:07:46</time>
+    <contents><target name="magecommunity"><dir name="Zapper"><dir name="ScanToLogin"><dir name="Helper"><file name="Data.php" hash="55039592b0bab5deb86aa3927f688688"/></dir><dir name="controllers"><file name="IndexController.php" hash="699dcd7ee848003441d232a1db069ab1"/></dir><dir name="etc"><file name="config.xml" hash="b1d69d9c43bfc8f3d196fe55fddeb612"/><file name="system.xml" hash="f030377415e447c1da38b24af034a4ee"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Zapper_ScanToLogin.xml" hash="03f5d9bd8330d2e247af37e9d30d0d61"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="scantologin.xml" hash="77a4bf6c51ef04a0a404fa2b20eea5b0"/></dir><dir name="template"><dir name="scantologin"><dir name="checkout"><file name="login.phtml" hash="72c0ed8bad388b8411509ce192e2de30"/></dir><dir name="form"><file name="login.phtml" hash="9edb802fd8cbf4658f111a2a714d3cb9"/><file name="mini.login.phtml" hash="232b17689a88d8def005efc88ff8dd5d"/></dir><dir name="page"><file name="login.phtml" hash="e07b2722ef23c2da59b726a7b389f699"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="zapper"><file name="zappertech.css" hash="aa66f48eb7bd1e30e4ea258de61d0db4"/></dir></dir><dir name="js"><dir name="zapper"><file name="implementation.js" hash="754903ce45368ed0620949434e7b9dc4"/><file name="jquery-1.10.2.js" hash="91515770ce8c55de23b306444d8ea998"/><file name="jquery-1.7.2.min.js" hash="b11ced65f32fedbe9bf81ef9db0f3c94"/><file name="jquery-migrate.min.js" hash="512b871a2830e44259bc3ce3343afcd0"/><file name="jquery-ui-1.10.4.custom.js" hash="dd6368e3106d748777b1c7748b176466"/><file name="jquery-ui-1.10.4.custom.min.js" hash="a1d6f5f308149bd2ee00efcee3d701ef"/><file name="jquery.js" hash="92c9ccfa9216499d48ecc11e6d9887d5"/><file name="scantocheckout.js" hash="d912d8070e5636d4d5c355ef58e297a7"/><file name="zappercheckout.js" hash="fb967cd3f95b749d365170bb21509f10"/><file name="zapperpay.js" hash="59e59068b05fcff787f39ae0c3b6599b"/><file name="zappertech.js" hash="da2fd29f8f4b43c82105f1417019457c"/></dir></dir><dir name="images"><dir name="zapper"><file name="appstore_icons.png" hash="cb48b0beba0ee8e3efc3cbf3cec6c3da"/><file name="available_for.png" hash="016639175a4daaf7b2d6568f334e8982"/><file name="scan-to-login-en_GB.png" hash="35cf6d9a41a8a862da6b7179ec49b195"/><file name="scan_to_checkout.png" hash="7d13ee840cab4d3be3cf04631087453e"/><file name="scan_to_checkout_logo.png" hash="d2914ac29023ec3e870588ab60e3e5f3"/><file name="scan_to_login_logo.png" hash="f0439a80fb76782150ee226d2ab28a0c"/><file name="stp_logo.png" hash="016b5dee7e38bdab7f8c60f8bfe2f584"/><file name="zapper_logo.png" hash="7ce3e993f3d2b922f4635f71ec7155c8"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

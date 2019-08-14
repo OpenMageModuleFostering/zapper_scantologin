@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+    	<Zapper_ScanToLogin>
+      		<version>1.0.0</version>
+    	</Zapper_ScanToLogin>
+	</modules>
+
+	<frontend>
+		<routers>
+			<scantologin>
+				<use>standard</use>
+				<args>
+					<module>Zapper_ScanToLogin</module>
+					<frontName>scantologin</frontName>
+				</args>
+			</scantologin>
+		</routers>
+		<layout>
+            <updates>
+                <scantologin>
+                    <file>scantologin.xml</file>
+                </scantologin>
+            </updates>
+        </layout>
+	</frontend>
+
+  	<global>
+  		<resources>
+	  		<scantologin_setup>
+				<setup>
+		  			<module>Zapper_ScanToLogin</module>
+				</setup>
+				<connection>
+		  			<use>core_setup</use>
+				</connection>
+	  		</scantologin_setup>
+	  		<scantologin_write>
+				<connection>
+		  			<use>core_write</use>
+				</connection>
+	  		</scantologin_write>
+	  		<scantologin_read>
+				<connection>
+		  			<use>core_read</use>
+				</connection>
+	  		</scantologin_read>
+		</resources>
+
+
+		<helpers>
+			<scantologin>
+				<class>Zapper_ScanToLogin_Helper</class>
+			</scantologin>
+		</helpers>
+
+
+		
+  	</global>
+
+  	<admin>
+		<routers>
+	  		<adminhtml>
+				<args>
+		  			<modules>
+		  				<scantologin after="Mage_Adminhtml">Zapper_ScanToLogin_Adminhtml</scantologin>
+		  				<frontName>scantologin_admin</frontName>
+		  			</modules>
+				</args>
+	  		</adminhtml>
+		</routers>
+  	</admin>
+  	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Zapper_ScanToLogin>
+							<title>Zapper Scan To Login Module</title>
+							<sort_order>10</sort_order>
+						</Zapper_ScanToLogin>
+						<system>
+                            <children>
+                                <config>
+                                    <children>
+                                       <zapper translate="title" module="scantologin">
+                                            <title>Zapper Scan To Login</title>
+                                        </zapper>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<scantologin>
+					<file>scantologin.xml</file>
+				</scantologin>
+			</updates>
+		</layout>
+    </adminhtml>
+    <default>
+        <zapper>
+        	<config>
+        		<merchant_id>1016</merchant_id>
+            	<qrsize>4</qrsize>
+            	<timeout>5000</timeout>
+        	</config>
+            <scan_to_login>
+            	<site_id>1017</site_id>
+            	<active>1</active>
+            	<sandbox>1</sandbox>
+            	<selector>login-form</selector>
+            </scan_to_login>            
+        </zapper>
+	</default>
+    
+</config>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>   
+<layout version="0.0.1">  
+	<default>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/zapper/zappertech.css</name></action>
+        </reference>
+		<reference name = 'header'>	
+            <block type="core/template" name="scantologin_form_login" as="topLogin" template="scantologin/page/login.phtml"/>
+        </reference>  
+	</default>
+		
+	<customer_logged_out>
+        <reference name="head">
+			<!-- <action method="addItem"><type>skin_js</type><name>js/zapper/jquery.js</name></action> -->
+			<action method="addItem"><type>skin_js</type><name>js/zapper/jquery-migrate.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/zapper/zappertech.js</name></action>
+			<action method="addItem"><type>skin_css</type><name>css/zapper/zappertech.css</name></action>
+        </reference>
+    </customer_logged_out>
+    
+    <customer_logged_in>
+    	<reference name="head">
+    		<action method="addItem"><type>skin_css</type><name>css/zapper/zappertech.css</name></action>
+    		<!-- <action method="addItem"><type>skin_js</type><name>js/zapper/jquery.js</name></action> -->
+			<action method="removeItem"><type>skin_js</type><name>js/zapper/jquery-migrate.min.js</name></action>
+    		<action method="removeItem"><type>skin_js</type><name>../skin/frontend/base/default/js/zappertech.js</name></action>
+		</reference>
+	</customer_logged_in>
+	
+	<scantologin_index_index>   
+	    <reference name="root">   
+	      	<action method="setTemplate"><template>page/1column.phtml</template></action>   
+	    </reference>   
+	    <reference name="content">   
+	      	<block type="scantologin/index" name="scantologin_index" template="scantologin/index.phtml"/>   
+	    </reference>   
+  	</scantologin_index_index> 
+  	
+  	<customer_account_login translate="label">
+  		<remove name="scantologin_form_login"/>
+        <reference name="customer_form_login">
+            <action method="setTemplate"><template>scantologin/form/login.phtml</template></action>
+        </reference>
+    </customer_account_login>
+  	
+	<checkout_onepage_index translate="label">
+		<remove name="scantologin_form_login"/>
+		<update handle="checkout.onepage.login" />
+		<reference name="checkout.onepage.login">
+			<action method="setTemplate"><template>scantologin/checkout/login.phtml</template></action>
+		</reference>
+	</checkout_onepage_index>	
+	
+	<customer_logged_out>
+        <reference name = 'header'>	
+            <block type="core/template" name="scantologin_form_login" as="topLogin" template="scantologin/page/login.phtml"/>
+        </reference>        
+    </customer_logged_out>
+    
+    <customer_logged_in>
+    	<remove name="scantologin_form_login"/>
+    </customer_logged_in>
+</layout> 
